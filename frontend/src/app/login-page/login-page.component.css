@@ -67,8 +67,13 @@ form, .form-group, .reg-form {
   background: transparent;
   outline: none;
   height: 35px;
-  font-size: 15px;
+  font-size: 17px;
   color: #fff;
+}
+
+.reg-form input[type="text"].ng-invalid.ng-touched,
+.reg-form input[type="password"].ng-invalid.ng-touched {
+  border-bottom: 1px solid red;
 }
 
 .button {
