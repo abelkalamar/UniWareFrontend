@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
