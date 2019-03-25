@@ -57,7 +57,7 @@ form, .form-group, .reg-form {
 
 .reg-form input {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .reg-form input[type="text"],
@@ -82,8 +82,17 @@ form, .form-group, .reg-form {
   margin-top: 20px;
 }
 
+.button:hover {
+  background: rgb(248, 61, 61);
+}
+
 .error {
   color: red;
   font-size: 12px;
-  margin: 0;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+.show {
+  visibility: unset;
 }
