@@ -1,0 +1,89 @@
+/* .container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+} */
+
+.container:before{
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/bcg_img02.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+form, .form-group, .reg-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+.avatar {
+  width: 50%;
+  border-radius: 50%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.reg-form h2 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reg-form label {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.reg-form input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.reg-form input[type="text"],
+.reg-form input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 35px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.button {
+  height: 30px;
+  color:  #fff;
+  cursor: pointer;
+  background: red;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}
