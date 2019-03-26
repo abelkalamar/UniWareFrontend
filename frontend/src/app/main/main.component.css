@@ -1,0 +1,43 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.nav{
+  position: absolute;
+  width: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background: rgba(137, 137, 137, 0.8);
+}
+
+.content {
+  width: 80%;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content {
+    width: 100%;
+  }
+
+  .sidebar {
+    height: 20%;
+  }
+
+  .content {
+    height: 80%;
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgba(137, 137, 137, 0.8);
+}
+
+/* .container:before {
+  content: '';
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-image: url(../../../assets/side_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+} */
+
+
+

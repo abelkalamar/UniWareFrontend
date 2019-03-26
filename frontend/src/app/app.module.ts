@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './main/navbar/navbar.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
-import { UploadFileComponent } from './upload-file/upload-file.component';
+import { UploadFileComponent } from './main/upload-file/upload-file.component';
+import { MainComponent } from './main/main.component';
+import { SidebarComponent } from './main/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     NavbarComponent,
     LoginPageComponent,
     RegisterComponent,
-    UploadFileComponent
+    UploadFileComponent,
+    MainComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

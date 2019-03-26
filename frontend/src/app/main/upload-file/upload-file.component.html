@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Upload file!</h2>
+
+  <div class="upload">
+    <form [formGroup]="uploadFile" action="/upload" (ngSubmit)="onSubmit()" method="POST" enctype="multipart/form-data">
+      <button class="button" type="button" (click)=fileInput.click()>
+        Upload
+      </button>
+      <input 
+      #fileInput 
+      formControlName="files" 
+      type="file" (change)="onFileAdded($event)" 
+      style="display: none;">
+      <button class="button" [disabled]="!uploadFile.valid" type="submit">Send</button>
+    </form>
+  </div>
+</div>
