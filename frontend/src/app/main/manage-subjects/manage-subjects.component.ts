@@ -14,6 +14,13 @@ export class ManageSubjectsComponent implements OnInit {
   constructor(private subjectService: SubjectService) { }
 
   ngOnInit() {
+    this.subjectService.getSubjects
+      .subscribe(
+        (subjects: { subjectList: Object[] }) => {
+          this.subjects = subjects.subjectList;
+          console.log(this.subjects);
+        }
+      );
   }
 
   onClicked() {
@@ -21,13 +28,13 @@ export class ManageSubjectsComponent implements OnInit {
   }
 
   getSubjects(): void {
-    this.subjectService.getAllSubjects()
-      .subscribe(
-        response => {
-          this.subjects = response.subjectList;
-          console.log(this.subjects);
-        }
-      );
+    // this.subjectService.getAllSubjects()
+    //   .subscribe(
+    //     response => {
+    //       this.subjects = response.subjectList;
+    //       console.log(this.subjects);
+    //     }
+    //   );
   }
 
   selectSubject(subject) {

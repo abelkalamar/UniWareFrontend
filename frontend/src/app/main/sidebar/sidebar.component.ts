@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onClicked() {
-
+    this.subjectService.getAllSubjects();
   }
 
 }
