@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { UploadFileComponent } from './main/upload-file/upload-file.component';
 import { MainComponent } from './main/main.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
+import { ManageSubjectsComponent } from './main/manage-subjects/manage-subjects.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SidebarComponent } from './main/sidebar/sidebar.component';
     RegisterComponent,
     UploadFileComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    ManageSubjectsComponent
   ],
   imports: [
     BrowserModule,

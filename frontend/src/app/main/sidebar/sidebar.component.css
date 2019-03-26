@@ -1,7 +1,11 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
   background: rgba(137, 137, 137, 0.8);
+  padding: 20px;
 }
 
 /* .container:before {
@@ -15,5 +19,20 @@
   background-size: cover;
 } */
 
+.button {
+  color:  #fff;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  background: black;
+  outline: none;
+  min-width: 15%;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px;
+}
 
-
+.button:hover {
+  background: rgb(248, 61, 61);
+}

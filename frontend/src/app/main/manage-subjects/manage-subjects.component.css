@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.button {
+  color:  #fff;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  background: black;
+  outline: none;
+  width: 20%;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.button:hover {
+  background: rgb(248, 61, 61);
+}
+
+.uniSubject {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
