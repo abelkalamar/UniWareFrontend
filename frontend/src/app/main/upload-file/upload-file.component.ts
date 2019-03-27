@@ -23,11 +23,16 @@ export class UploadFileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id = this.route.params.value.id;
+    const id = this.route.snapshot.params['id'];
     this.subject = this.subjectService.getSubjectContent(id);
     // this.uploadFile = new FormGroup({
     //   'files': new FormControl(null, Validators.required)
     // });
+    this.route.params
+      .subscribe(params => {
+        const newId = params['id'];
+        this.subject = this.subjectService.getSubjectContent(newId);
+      });
   }
 
   onFileAdded(event) {
