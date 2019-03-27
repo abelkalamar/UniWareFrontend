@@ -40,6 +40,9 @@ export class ManageSubjectsComponent implements OnInit {
   selectSubject(subject) {
     if (!this.subscribedSubjects.includes(subject)) {
       this.subscribedSubjects.push(subject);
+    } else {
+      const index = this.subscribedSubjects.indexOf(subject);
+      this.subscribedSubjects.splice(index, 1);
     }
     console.log(this.subscribedSubjects);
   }

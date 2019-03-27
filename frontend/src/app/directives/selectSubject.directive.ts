@@ -9,10 +9,13 @@ export class SelectSubjectDirective implements OnInit {
   @HostBinding('style.backgroundColor') backgroundColor: string;
 
   ngOnInit() {
-
   }
 
   @HostListener('click') click() {
-    this.backgroundColor = this.highlightColor;
+    if (this.backgroundColor === 'green') {
+      this.backgroundColor = 'white';
+    } else {
+      this.backgroundColor = this.highlightColor;
+    }
   }
 }
