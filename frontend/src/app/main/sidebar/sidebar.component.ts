@@ -8,11 +8,19 @@ import { SubjectService } from 'src/services/subject.service';
 })
 export class SidebarComponent implements OnInit {
 
+  subscribedSubjects: { id: number, name: string }[] = [];
+
   constructor(
     private subjectService: SubjectService
   ) { }
 
   ngOnInit() {
+    this.subjectService.getSubscribedSubjects
+      .subscribe(
+        subjects => {
+          this.subscribedSubjects = subjects;
+        }
+      );
   }
 
   onClicked() {

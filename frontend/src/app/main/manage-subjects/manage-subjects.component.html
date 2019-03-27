@@ -1,7 +1,10 @@
 <div class="container">
-
-  <button type="button" class="button" (click)="onClicked()">Get all subjects</button>
-    <div class="uniSubject" *ngFor="let subject of subjects">
-      <a (click)="selectSubject(subject)">{{ subject.name }}</a></div>
+  <div 
+  appSelectSubject 
+  (click)="selectSubject(subject)" 
+  class="uniSubject" 
+  *ngFor="let subject of subjects">
+    {{ subject.name }}
+  </div>
   <button type="button" class="button" (click)="subscribe()">Subscribe</button>
 </div>

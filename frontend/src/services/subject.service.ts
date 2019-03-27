@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class SubjectService {
 
   getSubjects = new EventEmitter<{ subjectList: Object[] }>();
+  getSubscribedSubjects = new EventEmitter<{id: number, name: string}[]>();
 
   mockSubjects = {
     subjectList: [
@@ -22,6 +23,46 @@ export class SubjectService {
       {
         id: 3,
         name: 'Literature'
+      },
+      {
+        id: 4,
+        name: 'Phisycs'
+      },
+      {
+        id: 5,
+        name: 'Sports'
+      },
+      {
+        id: 6,
+        name: 'Chemistry'
+      },
+      {
+        id: 7,
+        name: 'Art'
+      },
+      {
+        id: 8,
+        name: 'Biology'
+      },
+      {
+        id: 9,
+        name: 'Geography'
+      },
+      {
+        id: 10,
+        name: 'Grammar'
+      },
+      {
+        id: 11,
+        name: 'Ethics'
+      },
+      {
+        id: 12,
+        name: 'English'
+      },
+      {
+        id: 13,
+        name: 'German'
       }
     ]
   };
@@ -46,7 +87,9 @@ export class SubjectService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${localStorage.getItem('token')}`)
       .set('Content-Type', 'application/json');
-    return this.http.post<{ id: number, name: string }[]>('http://10.27.6.51:8080/api/subject', { subjectList: subjects }, { headers });
+      this.getSubscribedSubjects.emit(subjects);
+      return new Observable<null>();
+    // return this.http.post<{ id: number, name: string }[]>('http://10.27.6.51:8080/api/subject', { subjectList: subjects }, { headers });
   }
 
 }

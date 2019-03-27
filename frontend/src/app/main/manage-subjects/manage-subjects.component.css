@@ -9,22 +9,35 @@
   font-size: 14px;
   letter-spacing: 0.1em;
   cursor: pointer;
-  background: black;
+  background: rgb(183, 200, 231);
   outline: none;
   width: 20%;
   border: none;
-  border-radius: 25px;
   margin-top: 20px;
   padding: 10px;
 }
 
 .button:hover {
-  background: rgb(248, 61, 61);
+  background: rgb(245, 179, 179);
 }
 
 .uniSubject {
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  margin: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
 }
+
+.uniSubject a {
+  display: inline-block;
+}
+
+.uniSubject:hover {
+  /* box-shadow: 11px 11px 5px -8px rgba(0,0,0,0.64); */
+  background: rgb(250, 216, 203);
+}
+
+

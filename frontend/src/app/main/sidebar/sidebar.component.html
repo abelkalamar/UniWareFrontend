@@ -1,3 +1,8 @@
 <div class="container">
   <button type="button" class="button" (click)="onClicked()">Manage subjects</button>
+  <div class="subjects">
+    <div *ngFor="let subject of subscribedSubjects" class="subscribedSubj">
+      <a>{{ subject.name }}</a>
+    </div>
+  </div>
 </div>
