@@ -1,8 +1,12 @@
 img {
   max-width: 50px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
+img:focus {
+  outline: none;
+}
 
 .navbar {
   background-color: black;

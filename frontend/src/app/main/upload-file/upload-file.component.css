@@ -1,7 +1,64 @@
-.container {
+.container, .upload {
   width: 100%;
   height: 100%;
-  background: rgb(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  font-size: 34px;
+  margin: 20px auto;
+}
+
+.files {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.fileContent {
+  margin: 5px 0;
+  border-bottom: 1px solid black;
+  width: 80%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload, form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.uploadField{
+  border: 1px dashed #777777;
+  border-radius: 10px;
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadCloud {
+  width: 20%;
+  margin: 20px auto;
+}
+
+.dragTextFirst {
+  margin: 20px 0 5px 0;
+}
+
+.dragTextSecond span {
+  color: blue;
+  cursor: pointer;
 }
 
 .button {

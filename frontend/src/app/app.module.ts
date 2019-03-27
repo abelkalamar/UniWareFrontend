@@ -13,6 +13,7 @@ import { MainComponent } from './main/main.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 import { ManageSubjectsComponent } from './main/manage-subjects/manage-subjects.component';
 import { SelectSubjectDirective } from './directives/selectSubject.directive';
+import { BaseComponent } from './main/base/base.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SelectSubjectDirective } from './directives/selectSubject.directive';
     MainComponent,
     SidebarComponent,
     ManageSubjectsComponent,
-    SelectSubjectDirective
+    SelectSubjectDirective,
+    BaseComponent
   ],
   imports: [
     BrowserModule,

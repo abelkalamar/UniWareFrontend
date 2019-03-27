@@ -1,16 +1,28 @@
 <div class="container">
-  <h2>Upload file!</h2>
-
+  <h1>{{ subject.name }}</h1>
+  <div class="files">
+    <div class="fileContent">1. file content</div>
+    <div class="fileContent">2. file content</div>
+    <div class="fileContent">3. file content</div>
+    <div class="fileContent">4. file content</div>
+    <div class="fileContent">5. file content</div>
+    <div class="fileContent">6. file content</div>
+  </div>
   <div class="upload">
-    <form [formGroup]="uploadFile" action="/upload" (ngSubmit)="onSubmit()" method="POST" enctype="multipart/form-data">
-      <button class="button" type="button" (click)=fileInput.click()>
-        Upload
-      </button>
-      <input 
-      #fileInput 
-      formControlName="files" 
-      type="file" (change)="onFileAdded($event)" 
-      style="display: none;">
+    <form
+      [formGroup]="uploadFile" 
+      action="/upload" (ngSubmit)="onSubmit()" 
+      method="POST" enctype="multipart/form-data">
+      <div class="uploadField">
+        <img class="uploadCloud" src="../../../assets/upload_cloud.png" alt="upload_cloud">
+        <p class="dragTextFirst">Drag and drop to upload</p>
+        <p class="dragTextSecond">or <span (click)=fileInput.click()>browse</span> to choose a file.</p>
+        <input #fileInput 
+        formControlName="files" 
+        type="file" 
+        (change)="onFileAdded($event)" 
+        style="display: none;">
+      </div>
       <button class="button" [disabled]="!uploadFile.valid" type="submit">Send</button>
     </form>
   </div>

@@ -8,6 +8,7 @@ import { SubjectService } from 'src/services/subject.service';
 })
 export class SidebarComponent implements OnInit {
 
+  content = '';
   subscribedSubjects: { id: number, name: string }[] = [];
 
   constructor(
@@ -27,7 +28,7 @@ export class SidebarComponent implements OnInit {
       });
   }
 
-  onClicked() {
+  manageSubjects() {
     this.subjectService.getAllSubjects();
   }
 

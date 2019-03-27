@@ -5,7 +5,6 @@
   width: 100%;
   height: 100%;
   background: rgba(137, 137, 137, 0.8);
-  padding: 20px;
 }
 
 /* .container:before {
@@ -24,15 +23,39 @@
   font-size: 14px;
   letter-spacing: 0.1em;
   cursor: pointer;
-  background: black;
+  background: rgb(183, 200, 231);
   outline: none;
   min-width: 15%;
   border: none;
-  border-radius: 25px;
-  margin-top: 20px;
+  margin: 20px;
   padding: 10px;
 }
 
+h2{
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
 .button:hover {
-  background: rgb(248, 61, 61);
+  background: rgb(245, 179, 179);
+}
+
+.subscribedSubj {
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0px;
+}
+
+.subscribedSubj:hover {
+  color: rgb(255, 169, 169);
+  border-bottom: 1px solid rgb(255, 169, 169);
+}
+
+.subscribedSubj:focus {
+  outline: none;
 }

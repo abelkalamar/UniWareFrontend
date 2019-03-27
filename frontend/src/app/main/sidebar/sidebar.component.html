@@ -1,8 +1,16 @@
 <div class="container">
-  <button type="button" class="button" (click)="onClicked()">Manage subjects</button>
+  <button 
+  type="button" 
+  class="button" 
+  routerLink="/main/manage"
+  (click)="manageSubjects()"
+  >Manage subjects</button>
   <div class="subjects">
-    <div *ngFor="let subject of subscribedSubjects" class="subscribedSubj">
-      <a>{{ subject.name }}</a>
+    <h2>My Subjects</h2>
+    <div 
+    *ngFor="let subject of subscribedSubjects" 
+    class="subscribedSubj"
+    routerLink="/main/subject/{{subject.id}}">
+    {{ subject.name }}
     </div>
   </div>
-</div>

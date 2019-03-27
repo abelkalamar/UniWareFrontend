@@ -100,4 +100,12 @@ export class SubjectService {
     return this.http.get<{ subjectList: { id: number, name: string }[] }>(`${this.baseUrl}/api/subject/all`, { headers });
   }
 
+  getSubjectContent(id: number) {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+    // return this.http.get<Object>(`${this.baseUrl}/api/subject/${id}`, { headers });
+    return this.mockSubjects.subjectList.find(e => {
+      return e.id === +id;
+    });
+  }
 }

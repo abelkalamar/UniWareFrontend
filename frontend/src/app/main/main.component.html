@@ -6,9 +6,10 @@
     <div class="sidebar">
       <app-sidebar></app-sidebar>
     </div>
-    <div [ngSwitch]='content' class="content">
-      <app-upload-file *ngSwitchCase="'uploadFile'"></app-upload-file>
-      <app-manage-subjects *ngSwitchCase="'manageSubjects'"></app-manage-subjects>
+    <div class="content">
+      <router-outlet></router-outlet>
+      <!-- <app-upload-file *ngSwitchCase="'uploadFile'"></app-upload-file>
+      <app-manage-subjects *ngSwitchCase="'manageSubjects'"></app-manage-subjects> -->
     </div>
   </main>
 </div>

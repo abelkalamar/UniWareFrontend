@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubjectService } from 'src/services/subject.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-subjects',
@@ -11,9 +12,13 @@ export class ManageSubjectsComponent implements OnInit {
   subjects: Object[] = [];
   subscribedSubjects: { id: number, name: string }[] = [];
 
-  constructor(private subjectService: SubjectService) { }
+  constructor(
+    private subjectService: SubjectService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.subjectService.getAllSubjects();
     this.subjectService.getSubjects
       .subscribe(
         (subjects: { subjectList: Object[] }) => {
@@ -21,10 +26,6 @@ export class ManageSubjectsComponent implements OnInit {
           console.log(this.subjects);
         }
       );
-  }
-
-  onClicked() {
-    this.getSubjects();
   }
 
   getSubjects(): void {
@@ -56,6 +57,7 @@ export class ManageSubjectsComponent implements OnInit {
           }
         }
       );
+    this.router.navigate(['/main']);
   }
 
 }
