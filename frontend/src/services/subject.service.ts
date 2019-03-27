@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ import { Observable } from 'rxjs';
 export class SubjectService {
 
   getSubjects = new EventEmitter<{ subjectList: Object[] }>();
-  getSubscribedSubjects = new EventEmitter<{id: number, name: string}[]>();
+  getSubscribedSubjects = new EventEmitter<{ id: number, name: string }[]>();
+  baseUrl = environment.baseUrlArchie;
 
   mockSubjects = {
     subjectList: [
@@ -74,7 +76,7 @@ export class SubjectService {
   getAllSubjects() {
     // const headers: HttpHeaders = new HttpHeaders()
     //   .set('Authorization', `Bearer ${localStorage.getItem('token')}`);
-    // this.http.get<{ subjectList: Object[] }>('http://10.27.6.51:8080/api/subject/all', { headers })
+    // this.http.get<{ subjectList: Object[] }>(`${this.baseUrl}/api/subject/all`, { headers })
     //   .subscribe(
     //     subjects => {
     //       this.getSubjects.emit(subjects);
@@ -87,9 +89,15 @@ export class SubjectService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${localStorage.getItem('token')}`)
       .set('Content-Type', 'application/json');
-      this.getSubscribedSubjects.emit(subjects);
-      return new Observable<null>();
-    // return this.http.post<{ id: number, name: string }[]>('http://10.27.6.51:8080/api/subject', { subjectList: subjects }, { headers });
+    this.getSubscribedSubjects.emit(subjects);
+    return new Observable<null>();
+    // return this.http.post<{ id: number, name: string }[]>(`${this.baseUrl}/api/subject`, { subjectList: subjects }, { headers });
+  }
+
+  getSubscribedSubjectsFromBackend(): Observable<{ subjectList: { id: number, name: string }[] }> {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+    return this.http.get<{ subjectList: { id: number, name: string }[] }>(`${this.baseUrl}/api/subject/all`, { headers });
   }
 
 }

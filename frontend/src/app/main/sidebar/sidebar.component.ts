@@ -21,6 +21,10 @@ export class SidebarComponent implements OnInit {
           this.subscribedSubjects = subjects;
         }
       );
+    this.subjectService.getSubscribedSubjectsFromBackend()
+      .subscribe(subjects => {
+        this.subscribedSubjects = subjects.subjectList;
+      });
   }
 
   onClicked() {
